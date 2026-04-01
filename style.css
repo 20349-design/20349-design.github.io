@@ -1,0 +1,396 @@
+/* ==============================================
+   RESET & STYLE UMUM
+   ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #eaeaea;
+    padding: 20px 10px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.cv-container {
+    display: flex;
+    flex-wrap: wrap; /* Tambah responsif untuk layar kecil */
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px; /* Tambah sudut melengkung agar lebih cantik */
+    overflow: hidden; /* Agar sudut melengkung menyelimuti semua bagian */
+}
+
+
+/* ==============================================
+   BAGIAN KIRI (LEFT PANEL)
+   ============================================== */
+.left-panel {
+    width: 34%;
+    background-color: #0b3c5d;
+    color: white;
+    padding: 30px 25px;
+}
+
+/* Foto Profil */
+.profile-photo {
+    position: relative;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    overflow: hidden; /* Agar overlay ikut bentuk sudut */
+    width: min(240px, 100%);
+    aspect-ratio: 1 / 1;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 15%;
+    display: block; /* Hapus ruang kosong di bawah gambar */
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(231, 76, 60, 0.85);
+    padding: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Section Umum */
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #3282b8;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Kontak */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.contact-list a {
+    color: #a2d5f2;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Tambah transisi saat hover */
+}
+
+.contact-list a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-list span {
+    background-color: #25d366;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* Pendidikan */
+.edu-item {
+    margin-bottom: 20px;
+}
+
+.edu-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f8c291;
+    margin-bottom: 3px;
+}
+
+.edu-date {
+    font-size: 13px;
+    color: #d1d8e0;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.edu-item p:not(.edu-date) {
+    font-size: 14px;
+}
+
+/* Kemampuan */
+.skill-category {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.skill-category h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f8c291;
+}
+
+.skill-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.skill-item i {
+    font-size: 18px;
+    color: #a2d5f2;
+    margin-top: 2px;
+}
+
+.skill-desc h5 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.skill-desc p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Prestasi */
+.achievement-list {
+    list-style: none;
+}
+
+.achievement-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.achievement-list i {
+    color: #f8c291;
+}
+
+/* Organisasi */
+.section ul:not(.contact-list):not(.achievement-list) {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.section ul:not(.contact-list):not(.achievement-list) li {
+    margin-bottom: 8px;
+}
+
+
+/* ==============================================
+   BAGIAN KANAN (RIGHT PANEL)
+   ============================================== */
+.right-panel {
+    width: 66%;
+    padding: 35px 40px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0b3c5d;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b3c5d;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header .tagline {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3282b8;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Content Section */
+.content-section {
+    margin-bottom: 35px;
+}
+
+.content-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0b3c5d;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.content-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Hobi */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.hobby-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #3282b8;
+}
+
+.hobby-icon {
+    font-size: 22px;
+    color: #0b3c5d;
+    margin-bottom: 10px;
+}
+
+.hobby-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b3c5d;
+    margin-bottom: 8px;
+}
+
+.hobby-content p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Visi & Misi */
+.vision-mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.vm-item h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0b3c5d;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vm-item p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.vm-item ul {
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.vm-item ul li {
+    margin-bottom: 6px;
+}
+
+/* Highlight Section */
+.content-section.highlight {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content-section.highlight h2 {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+.cv-footer {
+    background-color: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.cv-footer i {
+    color: #f8c291;
+    margin: 0 5px;
+}
+
+
+/* ==============================================
+   RESPONSIF UNTUK LAYAR KECIL (HP)
+   ============================================== */
+@media screen and (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+
+    .right-panel {
+        padding: 25px 30px;
+    }
+
+    .vision-mission {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+}
