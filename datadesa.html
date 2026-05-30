@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Desa Sukamaju</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <style>
+        /* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.logo-text span:first-child{
+    font-size:20px;
+    font-weight:700;
+    color:#0f172a;
+}
+
+.logo-text span:last-child{
+    font-size:28px;
+    font-weight:800;
+    color:#0f766e;
+}
+        /* =========================
+   KONTAK MODERN
+========================= */
+
+.contact-wrapper{
+    margin-top:50px;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.contact-info-modern{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+}
+
+.info-box i{
+    width:60px;
+    height:60px;
+    background:linear-gradient(135deg,#14b8a6,#0f766e);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:22px;
+}
+
+.info-box h4{
+    margin-bottom:5px;
+    color:#0f766e;
+}
+
+.contact-form-modern{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.input-group{
+    width:100%;
+}
+
+.input-group.full{
+    grid-column:1 / 3;
+}
+
+.contact-form-modern input,
+.contact-form-modern textarea{
+    width:100%;
+    padding:18px;
+    border:2px solid #e2e8f0;
+    border-radius:15px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+    transition:0.3s;
+}
+
+.contact-form-modern input:focus,
+.contact-form-modern textarea:focus{
+    border-color:#14b8a6;
+    outline:none;
+}
+
+.btn-kirim{
+    width:220px;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(135deg,#14b8a6,#0f766e);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn-kirim:hover{
+    transform:translateY(-5px);
+}
+
+.btn-kirim i{
+    margin-right:8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .contact-form-modern{
+        grid-template-columns:1fr;
+    }
+
+    .input-group.full{
+        grid-column:auto;
+    }
+
+    .btn-kirim{
+        width:100%;
+    }
+
+}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#f4f7fb;
+            color:#333;
+            overflow-x:hidden;
+        }
+
+        /* Navbar */
+        header{
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+            background:rgba(255,255,255,0.95);
+            backdrop-filter:blur(10px);
+            z-index:1000;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 8%;
+        }
+        nav a {
+             text-decoration: none;
+             color: #6a1b9a;
+             font-weight: 500;
+             margin: 0 10px;
+             transition: 0.3s;
+        }
+
+        nav a:hover {
+             color: #009688;
+   }
+        .logo{
+            font-size:24px;
+            font-weight:700;
+            color:#0f766e;
+        }
+
+        .menu{
+            display:flex;
+            gap:20px;
+            list-style:none;
+    overflow-x:auto;
+    white-space:nowrap;
+    scrollbar-width:none; /* Firefox */
+    -ms-overflow-style:none; /* IE and Edge */
+}
+
+.menu::-webkit-scrollbar{
+    display:none; /* Chrome, Safari, Opera */
+            color:#333;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        .menu a:hover{
+            color:#0f766e;
+        }
+
+        .menu-toggle{
+            display:none;
+            font-size:28px;
+            cursor:pointer;
+        }
+
+/* HERO WONOSOBO MODERN */
+
+  .hero {
+    height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.65)
+        ),
+        url("wonosobo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEK KABUT */
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,0.18),
+    transparent 35%),
+
+
+    radial-gradient(circle at bottom left,
+    rgba(20,184,166,0.25),
+    transparent 40%);
+
+    animation:floating 8s ease-in-out infinite;
+
+    z-index:1;
+}
+
+/* ANIMASI KABUT */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* KONTEN */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+
+    padding:55px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.35);
+
+    animation:fadeUp 1.2s ease;
+}
+
+/* JUDUL */
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    text-shadow:
+    0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* PARAGRAF */
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.9;
+
+    color:#f8fafc;
+
+    max-width:760px;
+    margin:auto;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #14b8a6,
+        #0f766e
+    );
+
+    color:white;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+/* HERO BERANDA */
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+}
+
+/* EFEK KABUT */
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,0.18),
+    transparent 35%),
+
+    radial-gradient(circle at bottom left,
+    rgba(20,184,166,0.25),
+    transparent 40%);
+
+    animation:floating 8s ease-in-out infinite;
+
+    z-index:1;
+}
+
+/* ANIMASI */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* KONTEN */
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    text-shadow:
+    0 5px 25px rgba(0,0,0,0.5);
+}
+
+/* PARAGRAF */
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.9;
+
+    color:#f8fafc;
+
+    max-width:760px;
+    margin:auto;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #14b8a6,
+        #0f766e
+    );
+
+    color:white;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero{
+        background-attachment:scroll;
+    }
+
+    .hero-content{
+        padding:30px 20px;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+}
+
+
+        .hero-content h1{
+            font-size:55px;
+            margin-bottom:15px;
+        }
+
+        .hero-content p{
+            max-width:750px;
+            margin:auto;
+            line-height:1.8;
+            font-size:18px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 30px;
+            background:#14b8a6;
+            color:white;
+            border-radius:30px;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#0f766e;
+            transform:translateY(-3px);
+        }
+
+        /* General Section */
+        section{
+            padding:90px 8%;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .section-title h2{
+            font-size:38px;
+            color:#0f766e;
+            margin-bottom:10px;
+        }
+
+        .section-title p{
+            color:#666;
+        }
+
+        /* About */
+        .about-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:40px;
+            align-items:center;
+        }
+
+        .about-image img{
+            width:100%;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-text p{
+            margin-bottom:18px;
+            line-height:1.9;
+            text-align:justify;
+        }
+
+        /* Visi Misi */
+        .vision-mission{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 10px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h3{
+            color:#0f766e;
+            margin-bottom:15px;
+        }
+
+        .card ul{
+            padding-left:20px;
+            line-height:1.8;
+        }
+
+        /* Struktur Organisasi */
+        .org-grid{
+            display:grid;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
+            margin-top:40px;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .struktur-item {
+            text-align: center;
+            width: 150px;
+        }
+
+        .struktur-item img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .org-card{
+            background:white;
+            padding:25px;
+            border-radius:18px;
+            text-align:center;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .org-card img{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-bottom:15px;
+        }
+
+        .org-card h4{
+            margin-bottom:8px;
+            color:#0f766e;
+        }
+
+        /* Statistik */
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .stat-box{
+            background:linear-gradient(135deg,#14b8a6,#0f766e);
+            color:white;
+            padding:35px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .stat-box h3{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        /* Table */
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:25px;
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        table th, table td{
+            padding:15px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+        }
+
+        table th{
+            background:#0f766e;
+            color:white;
+        }
+
+        /* UMKM */
+        .umkm-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .umkm-card{
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .umkm-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .umkm-card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+
+        .umkm-content{
+            padding:20px;
+        }
+
+        .umkm-content h4{
+            color:#0f766e;
+            margin-bottom:10px;
+        }
+
+        /* Gallery */
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .gallery-grid img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+            border-radius:15px;
+            transition:0.3s;
+        }
+
+        .gallery-grid img:hover{
+            transform:scale(1.04);
+        }
+
+        /* Video */
+        .video-container{
+            margin-top:40px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe{
+            width:100%;
+            height:500px;
+        }
+
+        /* Map */
+        .map{
+            margin-top:30px;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .map iframe{
+            width:100%;
+            height:450px;
+            border:0;
+        }
+
+        /* Contact */
+        .contact-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:40px;
+        }
+
+        .contact-info{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-info p{
+            margin-bottom:18px;
+            line-height:1.8;
+        }
+
+        .contact-form{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            font-family:'Poppins',sans-serif;
+        }
+
+        .contact-form button{
+            background:#14b8a6;
+            color:white;
+            border:none;
+            padding:14px 25px;
+            border-radius:10px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .contact-form button:hover{
+            background:#0f766e;
+        }
+
+        /* Footer */
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:25px;
+        }
+
+        /* Responsive */
+        @media(max-width:900px){
+            .menu{
+                position:absolute;
+                top:70px;
+                right:-100%;
+                flex-direction:column;
+                background:white;
+                width:250px;
+                padding:25px;
+                box-shadow:0 5px 15px rgba(0,0,0,0.1);
+                transition:0.4s;
+            }
+
+            .menu.active{
+                right:20px;
+            }
+
+            .menu-toggle{
+                display:block;
+            }
+
+            .hero-content h1{
+                font-size:38px;
+            }
+
+            .video-container iframe{
+                height:250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+
+    <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-21\WhatsApp Image 2026-05-22 at 14.28.04.jpeg" alt="Logo Desa">
+
+    <div class="logo-text">
+        <span>Desa</span>
+        <span>Plodongan</span>
+    </div>
+
+</div>
+            <ul class="menu" id="menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil Desa</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#visi">Visi & Misi</a></li>
+                <li><a href="#organisasi">Struktur Organisasi</a></li>
+                <li><a href="#statistik">Statistik</a></li>
+                <li><a href="#umkm">UMKM</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+            </ul>
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <h1>Website Profil Desa Plodongan</h1>
+            <p>
+                Selamat datang di website resmi Desa Plodongan. Website ini berisi informasi lengkap mengenai sejarah desa, visi misi, struktur organisasi, statistik penduduk, informasi UMKM, galeri kegiatan, dan layanan pengaduan masyarakat.
+            </p>
+            <a href="#profil" class="btn">Lihat Profil Desa</a>
+        </div>
+    </section>
+
+    <!-- Profil Desa -->
+    <section id="profil">
+        <div class="section-title">
+            <h2>Profil Desa</h2>
+            <p>Desa Plodongan merupakan salah satu desa yang berada di wilayah Kecamatan Sukoharjo, Kabupaten Wonosobo, Provinsi Jawa Tengah. Desa ini dikenal sebagai desa yang asri, sejuk, dan memiliki masyarakat yang menjunjung tinggi nilai kebersamaan serta gotong royong.
+
+Dengan lingkungan alam yang masih hijau dan udara pegunungan yang sejuk, Desa Plodongan memiliki potensi di bidang pertanian, peternakan, UMKM, serta pengembangan sumber daya masyarakat. Selain itu, desa ini juga aktif dalam berbagai kegiatan sosial, pendidikan, dan pembangunan desa demi meningkatkan kesejahteraan masyarakat.
+
+Desa Plodongan terdiri dari beberapa dusun yang saling terhubung dan hidup berdampingan dengan penuh kerukunan. Semangat kekeluargaan menjadi salah satu ciri khas masyarakat desa dalam menjaga tradisi dan budaya lokal yang masih lestari hingga saat ini.
+
+Sebagai desa yang terus berkembang, Desa Plodongan berkomitmen untuk mewujudkan pelayanan masyarakat yang transparan, inovatif, dan berbasis teknologi melalui pengembangan informasi desa dan pelayanan publik yang lebih modern. Dengan semangat “membangun desa bersama masyarakat”, Desa Plodongan terus melangkah menuju desa yang maju, mandiri, dan sejahtera.</p>
+        </div>
+
+   <!-- Sejarah Desa -->
+<section id="sejarah">
+
+    <div class="section-title">
+        <h2>Sejarah Desa Plodongan</h2>
+        <p>Asal-usul dan sejarah lengkap Desa Plodongan</p>
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-image">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.13.49.jpeg" alt="Sejarah Desa">
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                Berikut ini sejarah mengenai Desa Plodongan:
+            </p>
+
+            <p>
+                Pada zaman dahulu kala ada seorang kamitua Desa yang bernama Ki Buyut Sadin.
+                Beliau singgah di sebuah perkampungan kecil yang sebagian penduduknya
+                menggunakan peralatan dari bambu untuk mengambil air bersih dan juga tempat
+                air Nira/Badik ( Nderes Aren ).
+            </p>
+
+            <p>
+                Ketika ki Buyut Sadin melanjutkan perjalanannya, dia pun melihat orang yang
+                sedang mengambil air nira ( nderes aren ). Kemudian ia bertanya:
+                “ Sing nggo wadah banyu aren ( Badik ) jenenge apa?
+                (wadah untuk air nira namanya apa?)”
+            </p>
+
+            <p>
+                “LODONG”, jawab salah seorang penduduk tersebut.
+            </p>
+
+            <p>
+                Karena banyaknya penduduk kampung yang menggunakan bambu sebagai tempat
+                air minum dan air nira (Nderes aren) Ki Buyut Sadin pun memberikan nama
+                perkampungan itu dengan nama “PLODONGAN”.
+            </p>
+
+            <p>
+                Lodong ( tempat air nira/ aren yang berasal dari Bambu ) dan semenjak itu
+                Ki Buyut Sadin pun menetap di kampung tersebut hingga akhir hayatnya,
+                juga makamnya ada di kampung tersebut.
+            </p>
+
+            <p>
+                Desa Plodongan yang terdiri dari 6 dukuhan ini, juga memiliki sejarah
+                masing-masing, yaitu:
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Sejarah Dukuh -->
+    <div class="vision-mission" style="margin-top:50px;">
+
+        <!-- Semampir -->
+        <div class="card">
+            <h3>1. Sejarah Dukuh Semampir</h3>
+
+            <p>
+                Suatu hari Ki Demang Kerta Leksana yang biasa di panggil Kyai Baleragas
+                melakukan perjalanan dengan beberapa pengikutnya, dan tibalah mereka
+                di sebuah perkampungan kecil yang bernama Plodongan.
+            </p>
+
+            <p>
+                Disana mereka bertemu dengan kamitua kampung yang bernama Ki Buyut Sadin.
+                Melihat kecilnya perkampungan itu, Ki Demang Kerta Leksana menawarkan
+                untuk memperluas wilayah perkampungan dengan perjanjian akan memberikan
+                tanah di wilayah kekuasaannya dan sebagai imbalannya kampung sebelah
+                bisa mengalirkan air irigasi dari kampong tersebut.
+            </p>
+
+            <p>
+                Ki Demang kerta Leksana juga memberikan petuah agar di kemudian hari
+                tidak di langgar oleh Ki Buyut Sadin dan keturunannya, larangan tersebut yaitu:
+                Tanah tersebut boleh di tempati turun temurun akan tetapi tidak boleh di jual.
+            </p>
+
+            <p>
+                Ki Buyut Sadin pun menerima tawarannya dan semenjak itu tanah hasil
+                perjanjian di berinama “SEMAMPIR” ( di gantungkan ).
+            </p>
+        </div>
+
+        <!-- Banjaran -->
+        <div class="card">
+            <h3>2. Sejarah Dukuh Banjaran Kidul dan Banjaran Lor</h3>
+
+            <p>
+                Ki Demang Kerta Leksana (Kyai Baleragas) dan para pengikutnya kemudian
+                melanjutkan perjalanannya, dan sampailah di sebuah perbukitan.
+            </p>
+
+            <p>
+                Ki Demang Kerta Leksana terpesona dengan kesuburan tanah dan alamnya,
+                juga karena luasnya perbukitan tersebut ki Demang Kerta leksana sampai
+                menunjuk-nunjukkan jarinya ke arah utara dan selatan kepada para pengikutnya.
+            </p>
+
+            <p>
+                Kemudian beliau memerintahkan kedua pengikutnya yang bernama
+                kyai Jenggot dan kyai Rese bodol ( nama samaran )
+                untuk mendirikan pemukiman di perbukitan tersebut sebagai kampong
+                tempat tinggal kedua pengikutnya.
+            </p>
+
+            <p>
+                Ki Demang Kerta Leksana pun berharap agar kedua pengikutnya bisa hidup
+                guyup rukun, damai dan sejahtera sehingga perbukitan itu pun di bagi
+                menjadi dua wilayah perkampungan, Utara dan Selatan dan di berinama
+                “BANJARAN LOR dan BANJARAN KIDUL”
+                ( Banjar- Pemekaran ).
+            </p>
+        </div>
+
+        <!-- Tindakan -->
+        <div class="card">
+            <h3>3. Dukuh Tindakan Kidul dan Tindakan Lor</h3>
+
+            <p>
+                Ki Demang Kerta Leksana (Kyai Baleragas ) juga singgah di sebuah
+                perkampungan untuk bertemu dengan Ki Suro Kerti dan Ki Wangsa Kerti,
+                keduanya adalah kakak beradik yang juga di segani di kampong tersebut.
+            </p>
+
+            <p>
+                Namun betapa kecewanya ki Demang Kerta Leksana karena tidak bisa
+                bertemu dengan Ki Suro kerti dan Ki Wangsa kerti sehingga tanpa sengaja
+                mengucapkan kata-kata:
+            </p>
+
+            <p>
+                “ Dasar bakul kendil , saben dina lungan terus ngalor ngidul ”
+                ( Dasar penjual kendil/ gerabah setiap hari selalu bepergian ).
+            </p>
+
+            <p>
+                Sehingga dari kata-kata yang di ucapkan Ki Demang kepada Ki Suro kerti
+                dan ki Wangsa kerti perkampungan itupun di berinama
+                “TINDAKAN LOR DAN TINDAKAN KIDUL”
+                (Tindakan - Bepergian ).
+            </p>
+        </div>
+
+        <!-- Sinang -->
+        <div class="card">
+            <h3>4. Tindakan Sinang</h3>
+
+            <p>
+                Berawal dari sebuah kejadian bencana alam yang terjadi pada sekitar tahun 1987.
+            </p>
+
+            <p>
+                Perbukitan yang berada di atas pemukiman warga dukuh Tindakan kidul longsor
+                dan mengakibatkan kerusakan tanah dan rumah warga sehingga mengharuskan
+                warga yang terkena dampak longsoran tanah tersebut pindah (Relokasi)
+                ketempat yang baru.
+            </p>
+
+            <p>
+                Di sebelah barat makam Desa yaitu tanah Negara( Gege ) yang gunakan
+                untuk imbalan atau upah atas jabatan juru kunci makam Desa / penjaga makam.
+            </p>
+
+            <p>
+                Sejak saat itu pemukiman yang baru di berinama “SINANG”
+                ( yang mengenang / mengingat ).
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Sumber -->
+    <div class="card" style="margin-top:50px;">
+        <h3>Sumber Berita</h3>
+
+        <ul>
+            <li>
+                Data Rupa Bumi yang dibuat oleh Bapak Bislam Mustofa
+                (Kaur Keuangan Desa Plodongan)
+            </li>
+
+            <li>
+                Para Tokoh / Sesepuh Desa Plodongan
+            </li>
+        </ul>
+    </div>
+
+    <!-- Bukti dan Fakta -->
+    <div class="card" style="margin-top:30px;">
+        <h3>Bukti dan Fakta Sejarah</h3>
+
+        <ul>
+            <li>
+                Bukti / fakta sejarah yang masih ada ( Makam-makam kuno )
+            </li>
+
+            <li>
+                Bukti / Fakta Lokasi Sejarah Sawah Alur dan Saluran air Ngipeng
+            </li>
+
+            <li>
+                Bukti / Fakta Sejarah peninggalan yang masih ada
+                Saluran Irigasi Panongan ( LAK GANDUL )
+            </li>
+        </ul>
+    </div>
+
+</section>
+    <!-- Visi Misi -->
+<section id="visi">
+
+    <div class="section-title">
+        <h2>Visi dan Misi</h2>
+        <p>Visi dan Misi Kepala Desa Plodongan Periode 2019-2025</p>
+    </div>
+
+    <div class="vision-mission">
+
+        <!-- VISI -->
+        <div class="card">
+            <h3>VISI</h3>
+
+            <h4 style="margin-bottom:20px; color:#0f766e;">
+                BERSAMA MASYARAKAT MELANJUTKAN PEMBANGUNAN MENUJU
+                PLODONGAN YANG ADIL, MAKMUR DAN SEJAHTERA
+            </h4>
+
+            <p style="line-height:1.9; text-align:justify;">
+                Rumusan visi tersebut pada dasarnya merupakan cita-cita
+                Pemerintah Desa Plodongan selama Tahun 2011-2015 yang
+                menggambarkan kondisi desa dalam keadaan surplus,
+                meratanya derajat ekonomi masyarakatnya.
+            </p>
+
+            <br>
+
+            <p style="line-height:1.9; text-align:justify;">
+                Pada konteks ini surplus diartikan sebagai kemampuan
+                keuangan desa dalam membiayai seluruh kegiatan desa
+                sesuai yang diprogramkan dan tercukupinya kebutuhan dasar
+                masing-masing anggota rumah tangga sehingga mendorong
+                tumbuhnya sumber daya manusia yang handal yang mampu
+                berperan mendorong kemakmuran desa dengan intensifikasi
+                dan ekstensifikasi dengan tetap mendasarkan pada
+                keimanan dan ketaqwaan terhadap Tuhan Yang Maha Esa.
+            </p>
+        </div>
+
+        <!-- MISI -->
+        <div class="card">
+            <h3>MISI</h3>
+
+            <ul style="line-height:2;">
+                <li>
+                    Menyelenggarakan pemerintahan yang efisien,
+                    efektif dan transparan;
+                </li>
+
+                <li>
+                    Menggali dan meningkatkan sumber pendapatan desa;
+                </li>
+
+                <li>
+                    Mengembangkan pemberdayaan lembaga dan kemasyarakatan;
+                </li>
+
+                <li>
+                    Meningkatkan dan mengembangkan kecerdasan
+                    Sumber Daya Manusia;
+                </li>
+
+                <li>
+                    Menciptakan rasa aman dan tenteram dalam suasana
+                    kehidupan yang demokratis dan agamis.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+    <!-- Struktur Organisasi -->
+    <section id="organisasi">
+        <div class="section-title">
+            <h2>Struktur Organisasi</h2>
+            <p>Perangkat dan aparatur Desa Plodongan</p>
+        </div>
+
+        <div class="org-grid">
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.22.jpeg" alt="Kepala Desa">
+                <h4>Yulianto</h4>
+                <p>Kepala Desa</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.22 (1).jpeg" alt="Sekretaris Desa">
+                <h4>Darno</h4>
+                <p>Sekretaris Desa</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.21.jpeg" alt="Bendahara">
+                <h4>Bislam Muatofa</h4>
+                <p>Bendahara Desa</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.21 (1).jpeg" alt="Kasi Pemerintahan">
+                <h4>Sagiyem</h4>
+                <p>Kasi Pemerintahan</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.21 (2).jpeg" alt="Kasi Pembangunan">
+                <h4>Widarso</h4>
+                <p>Kasi Kesejahteraan dan  Pelayanan</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.20.jpeg" alt="Kasi Kesejahteraan">
+                <h4>Tipuk Hastanti</h4>
+                <p>Kaur Umum Dan Perencanaan</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-15 at 15.18.21 (3).jpeg" alt="Kaur Keuangan">
+                <h4>Devi Lestari</h4>
+                <p>Kepala Dusun 1</p>
+            </div>
+
+            <div class="org-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-21\WhatsApp Image 2026-05-20 at 10.44.48.jpeg" alt="Kaur Umum">
+                <h4>Endah Dwi Suryani</h4>
+                <p>Kepala Dusun 2</p>
+            </div>
+        </div> 
+        </div>
+    </section>
+
+   <!-- Statistik Penduduk -->
+<section id="statistik">
+
+    <div class="section-title">
+        <h2>Statistik Penduduk</h2>
+        <p>Data Populasi Penduduk Desa Plodongan Per Wilayah</p>
+    </div>
+
+    <!-- Statistik Utama -->
+    <div class="stats">
+
+        <div class="stat-box">
+            <h3 id="warga">1567</h3>
+            <p>Total Penduduk</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="kk">458</h3>
+            <p>Kepala Keluarga</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="laki">841</h3>
+            <p>Laki-Laki</p>
+        </div>
+
+        <div class="stat-box">
+            <h3 id="perempuan">726</h3>
+            <p>Perempuan</p>
+        </div>
+
+    </div>
+
+    <!-- Tabel Statistik -->
+    <div style="overflow-x:auto; margin-top:40px;">
+
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Wilayah / Kawil / Ketua</th>
+                <th>KK</th>
+                <th>Jiwa</th>
+                <th>L</th>
+                <th>P</th>
+            </tr>
+
+            <!-- SEMAMPIR -->
+            <tr>
+                <td>1</td>
+                <td><b>Dusun SEMAMPIR</b></td>
+                <td>90</td>
+                <td>287</td>
+                <td>145</td>
+                <td>142</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 001</td>
+                <td>90</td>
+                <td>287</td>
+                <td>145</td>
+                <td>142</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 001</td>
+                <td>24</td>
+                <td>80</td>
+                <td>37</td>
+                <td>43</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>RT. 002</td>
+                <td>26</td>
+                <td>93</td>
+                <td>48</td>
+                <td>45</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>RT. 003</td>
+                <td>40</td>
+                <td>114</td>
+                <td>60</td>
+                <td>54</td>
+            </tr>
+
+            <!-- BANJARAN KIDUL -->
+            <tr>
+                <td>2</td>
+                <td><b>Dusun BANJARAN KIDUL</b></td>
+                <td>127</td>
+                <td>441</td>
+                <td>242</td>
+                <td>199</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 002</td>
+                <td>127</td>
+                <td>441</td>
+                <td>242</td>
+                <td>199</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 004</td>
+                <td>48</td>
+                <td>154</td>
+                <td>86</td>
+                <td>68</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>RT. 005</td>
+                <td>42</td>
+                <td>157</td>
+                <td>87</td>
+                <td>70</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>RT. 006</td>
+                <td>37</td>
+                <td>130</td>
+                <td>69</td>
+                <td>61</td>
+            </tr>
+
+            <!-- BANJARAN LOR -->
+            <tr>
+                <td>3</td>
+                <td><b>Dusun BANJARAN LOR</b></td>
+                <td>101</td>
+                <td>343</td>
+                <td>185</td>
+                <td>158</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 003</td>
+                <td>101</td>
+                <td>343</td>
+                <td>185</td>
+                <td>158</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 007</td>
+                <td>49</td>
+                <td>168</td>
+                <td>88</td>
+                <td>80</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>RT. 008</td>
+                <td>52</td>
+                <td>175</td>
+                <td>97</td>
+                <td>78</td>
+            </tr>
+
+            <!-- TINDAKAN KIDUL -->
+            <tr>
+                <td>4</td>
+                <td><b>Dusun TINDAKAN KIDUL</b></td>
+                <td>52</td>
+                <td>192</td>
+                <td>106</td>
+                <td>86</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 004</td>
+                <td>52</td>
+                <td>192</td>
+                <td>106</td>
+                <td>86</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 009</td>
+                <td>52</td>
+                <td>192</td>
+                <td>106</td>
+                <td>86</td>
+            </tr>
+
+            <!-- TINDAKAN SINANG -->
+            <tr>
+                <td>5</td>
+                <td><b>Dusun TINDAKAN SINANG</b></td>
+                <td>26</td>
+                <td>102</td>
+                <td>56</td>
+                <td>46</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 004</td>
+                <td>26</td>
+                <td>102</td>
+                <td>56</td>
+                <td>46</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 010</td>
+                <td>26</td>
+                <td>102</td>
+                <td>56</td>
+                <td>46</td>
+            </tr>
+
+            <!-- TINDAKAN LOR -->
+            <tr>
+                <td>6</td>
+                <td><b>Dusun TINDAKAN LOR</b></td>
+                <td>62</td>
+                <td>202</td>
+                <td>107</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RW. 004</td>
+                <td>62</td>
+                <td>202</td>
+                <td>107</td>
+                <td>95</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>RT. 011</td>
+                <td>37</td>
+                <td>117</td>
+                <td>62</td>
+                <td>55</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>RT. 012</td>
+                <td>25</td>
+                <td>85</td>
+                <td>45</td>
+                <td>40</td>
+            </tr>
+
+            <!-- TOTAL -->
+            <tr style="background:#0f766e; color:white; font-weight:bold;">
+                <td colspan="2">TOTAL</td>
+                <td>458</td>
+                <td>1.567</td>
+                <td>841</td>
+                <td>726</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+    <!-- UMKM -->
+    <section id="umkm">
+        <div class="section-title">
+            <h2>Informasi UMKM</h2>
+            <p>Produk unggulan dan usaha masyarakat desa</p>
+        </div>
+
+        <div class="umkm-grid">
+            <div class="umkm-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.00.50.jpeg" alt="Kuliner">
+                <div class="umkm-content">
+                    <h4>UMKM Kuliner</h4>
+                    <p>
+                        Menyediakan berbagai makanan desa seperti snack,nasi nox,nasi tumpeng,kue,brownies dll.
+                    </p>
+                </div>
+            </div>
+
+            <div class="umkm-card">
+                <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 18.57.47.jpeg" alt="Kerajinan">
+                <div class="umkm-content">
+                    <h4>Kerajinan Tangan</h4>
+                    <p>
+                        Produk anyaman bambu dan kerajinan kayu hasil karya masyarakat lokal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="umkm-card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1470&auto=format&fit=crop" alt="Pertanian">
+                <div class="umkm-content">
+                    <h4>Hasil Pertanian</h4>
+                    <p>
+                        Desa menghasilkan sayuran organik, padi, jagung, dan buah-buahan berkualitas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri">
+        <div class="section-title">
+            <h2>Galeri Desa</h2>
+            <p>Dokumentasi foto kegiatan desa</p>
+        </div>
+
+        <div class="gallery-grid">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.07.21.jpeg" alt="Galeri">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.07.10.jpeg" alt="Galeri">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.06.56.jpeg" alt="Galeri">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.07.45.jpeg" alt="Galeri">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.14.49.jpeg" alt="Galeri">
+            <img src="c:\Users\LENOVO\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\8556B91A31FFB141502F4F6377EB2DE8D224B62E\transfers\2026-20\WhatsApp Image 2026-05-16 at 19.17.38.jpeg" alt="Galeri">
+        </div>
+
+   <!-- KONTAK -->
+<section id="kontak">
+
+    <div class="section-title">
+        <h2>Kontak Desa</h2>
+        <p>Hubungi Pemerintah Desa Plodongan</p>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <!-- INFO -->
+        <div class="contact-info-modern">
+
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <h4>Alamat</h4>
+                    <p>Desa Plodongan, Sukoharjo, Wonosobo</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>pemdesplodongan@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Telepon</h4>
+                    <p>0812-3456-7890</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form-modern">
+
+            <div class="input-group">
+                <input type="text" placeholder="Nama Lengkap">
+            </div>
+
+            <div class="input-group">
+                <input type="email" placeholder="Email">
+            </div>
+
+            <div class="input-group full">
+                <textarea rows="6" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+
+            <button class="btn-kirim">
+                <i class="fa-solid fa-paper-plane"></i>
+                Kirim Pesan
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+        </div>
+        <!--lokasi-->
+        </div>
+
+    <!-- Maps Desa -->
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps?q=Desa+Plodongan&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+    
+
+</section>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
